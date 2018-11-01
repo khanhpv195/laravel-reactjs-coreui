@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Container, Row, Col, CardGroup, Card, CardBody, Button, Input, InputGroup, InputGroupAddon} from 'reactstrap';
-
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Login extends Component {
   render() {
@@ -46,7 +46,8 @@ class Login extends Component {
                       <h2>Sign up</h2>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.</p>
-                      <Button color="primary" className="mt-3" active>Register Now!</Button>
+                      <Button color="primary" className="mt-3" active>  <Link  color="primary" to="/register/" className="mt-3">Register Now!</Link></Button>
+                     
                     </div>
                   </CardBody>
                 </Card>
