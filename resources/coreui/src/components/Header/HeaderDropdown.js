@@ -33,6 +33,7 @@ class HeaderDropdown extends Component {
         <DropdownMenu right>
           <DropdownItem header tag="div" className="text-center"><strong>Account</strong></DropdownItem>
           <DropdownItem><i className="fa fa-bell-o"></i> <Link to="/login/">Login</Link></DropdownItem>
+          <DropdownItem><i className="fa fa-bell-o"></i> <Link to="/register/">Register</Link></DropdownItem>
         </DropdownMenu>
       </Dropdown>
     );

@@ -11,10 +11,17 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/', function () {
-    return view('welcome');
+    return view('email.template');
 });
-Route::resource('products', 'ProductController');
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/email',function(){
+    return view('email.email');
+});
+
+Route::post('/message/send', ['uses' => 'EmailController@sendMail', 'as' => 'front.fb']);
+// Auth::routes();
+
