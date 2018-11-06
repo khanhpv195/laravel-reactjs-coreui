@@ -1,16 +1,17 @@
+
 <!DOCTYPE html><!--[if IE]>  <html class="ie"> <![endif]-->
 <html>
 	<head>
 		<meta charset="utf-8" />
 		<title>
 		</title>
-		<link rel="stylesheet" type="text/css" href="{{asset('images/201811/style.css')}}" />
+		<link rel="stylesheet" type="text/css" href="http://35.240.140.159/images/201811/style.css" />
 	</head>
 	<body>
 		<div class="stl_01">
 			<div class="stl_02">
-				<object data="images/201811/img_03.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
-					<embed src="images/201811/img_03.svg" type="image/svg+xml" class="stl_03" />
+				<object data="http://35.240.140.159/images/201811/img_03.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
+					<embed src="http://35.240.140.159/images/201811/img_03.svg" type="image/svg+xml" class="stl_03" />
 				</object>
 			</div>
 			<div class="layer">
@@ -28,8 +29,8 @@
 		</div>
 		<div class="stl_01">
 			<div class="stl_02">
-				<object data="images/201811/img_04.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
-					<embed src="images/201811/img_04.svg" type="image/svg+xml" class="stl_03" />
+				<object data="http://35.240.140.159/images/201811/img_04.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
+					<embed src="http://35.240.140.159/images/201811/img_04.svg" type="image/svg+xml" class="stl_03" />
 				</object>
 			</div>
 			<div class="layer">
@@ -41,8 +42,8 @@
 		</div>
 		<div class="stl_01">
 			<div class="stl_02">
-				<object data="images/201811/img_08.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
-					<embed src="images/201811/img_08.svg" type="image/svg+xml" class="stl_03" />
+				<object data="http://35.240.140.159/images/201811/img_08.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
+					<embed src="http://35.240.140.159/images/201811/img_08.svg" type="image/svg+xml" class="stl_03" />
 				</object>
 			</div>
 			<div class="layer">
@@ -62,8 +63,8 @@
 		</div>
 		<div class="stl_01">
 			<div class="stl_02">
-				<object data="images/201811/img_09.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
-					<embed src="images/201811/img_09.svg" type="image/svg+xml" class="stl_03" />
+				<object data="http://35.240.140.159/images/201811/img_09.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
+					<embed src="http://35.240.140.159/images/201811/img_09.svg" type="image/svg+xml" class="stl_03" />
 				</object>
 			</div>
 			<div class="layer">
@@ -112,8 +113,8 @@
 		</div>
 		<div class="stl_01">
 			<div class="stl_02">
-				<object data="images/201811/img_10.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
-					<embed src="images/201811/img_10.svg" type="image/svg+xml" class="stl_03" />
+				<object data="http://35.240.140.159/images/201811/img_10.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
+					<embed src="http://35.240.140.159/images/201811/img_10.svg" type="image/svg+xml" class="stl_03" />
 				</object>
 			</div>
 			<div class="layer">
@@ -165,8 +166,8 @@
 		</div>
 		<div class="stl_01">
 			<div class="stl_02">
-				<object data="images/201811/img_11.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
-					<embed src="images/201811/img_11.svg" type="image/svg+xml" class="stl_03" />
+				<object data="http://35.240.140.159/images/201811/img_11.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
+					<embed src="http://35.240.140.159/images/201811/img_11.svg" type="image/svg+xml" class="stl_03" />
 				</object>
 			</div>
 			<div class="layer">
@@ -223,8 +224,8 @@
 		</div>
 		<div class="stl_01">
 			<div class="stl_02">
-				<object data="images/201811/img_12.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
-					<embed src="images/201811/img_12.svg" type="image/svg+xml" class="stl_03" />
+				<object data="http://35.240.140.159/images/201811/img_12.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
+					<embed src="http://35.240.140.159/images/201811/img_12.svg" type="image/svg+xml" class="stl_03" />
 				</object>
 			</div>
 			<div class="layer">
@@ -345,8 +346,8 @@
 		</div>
 		<div class="stl_01">
 			<div class="stl_02">
-				<object data="images/201811/img_13.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
-					<embed src="images/201811/img_13.svg" type="image/svg+xml" class="stl_03" />
+				<object data="http://35.240.140.159/images/201811/img_13.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
+					<embed src="http://35.240.140.159/images/201811/img_13.svg" type="image/svg+xml" class="stl_03" />
 				</object>
 			</div>
 			<div class="layer">
@@ -444,8 +445,8 @@
 		</div>
 		<div class="stl_01">
 			<div class="stl_02">
-				<object data="images/201811/img_14.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
-					<embed src="images/201811/img_14.svg" type="image/svg+xml" class="stl_03" />
+				<object data="http://35.240.140.159/images/201811/img_14.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
+					<embed src="http://35.240.140.159/images/201811/img_14.svg" type="image/svg+xml" class="stl_03" />
 				</object>
 			</div>
 			<div class="layer">
@@ -456,8 +457,8 @@
 		</div>
 		<div class="stl_01">
 			<div class="stl_02">
-				<object data="images/201811/img_17.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
-					<embed src="images/201811/img_17.svg" type="image/svg+xml" class="stl_03" />
+				<object data="http://35.240.140.159/images/201811/img_17.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
+					<embed src="http://35.240.140.159/images/201811/img_17.svg" type="image/svg+xml" class="stl_03" />
 				</object>
 			</div>
 			<div class="layer">
@@ -517,8 +518,8 @@
 		</div>
 		<div class="stl_01">
 			<div class="stl_02">
-				<object data="images/201811/img_18.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
-					<embed src="images/201811/img_18.svg" type="image/svg+xml" class="stl_03" />
+				<object data="http://35.240.140.159/images/201811/img_18.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
+					<embed src="http://35.240.140.159/images/201811/images/201811/img_18.svg" type="image/svg+xml" class="stl_03" />
 				</object>
 			</div>
 			<div class="layer">
@@ -614,8 +615,8 @@
 		</div>
 		<div class="stl_01">
 			<div class="stl_02">
-				<object data="images/201811/img_19.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
-					<embed src="images/201811/img_19.svg" type="image/svg+xml" class="stl_03" />
+				<object data="http://35.240.140.159/images/201811/images/201811/img_19.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
+					<embed src="http://35.240.140.159/images/201811/images/201811/img_19.svg" type="image/svg+xml" class="stl_03" />
 				</object>
 			</div>
 			<div class="layer">
@@ -705,8 +706,8 @@
 		</div>
 		<div class="stl_01">
 			<div class="stl_02">
-				<object data="images/201811/img_20.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
-					<embed src="images/201811/img_20.svg" type="image/svg+xml" class="stl_03" />
+				<object data="http://35.240.140.159/images/201811/images/201811/img_20.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
+					<embed src="http://35.240.140.159/images/201811/images/201811/img_20.svg" type="image/svg+xml" class="stl_03" />
 				</object>
 			</div>
 			<div class="layer">
@@ -717,8 +718,8 @@
 		</div>
 		<div class="stl_01">
 			<div class="stl_02">
-				<object data="images/201811/img_23.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
-					<embed src="images/201811/img_23.svg" type="image/svg+xml" class="stl_03" />
+				<object data="http://35.240.140.159/images/201811/images/201811/img_23.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
+					<embed src="http://35.240.140.159/images/201811/images/201811/img_23.svg" type="image/svg+xml" class="stl_03" />
 				</object>
 			</div>
 			<div class="layer">
@@ -752,8 +753,8 @@
 		</div>
 		<div class="stl_01">
 			<div class="stl_02">
-				<object data="images/201811/img_27.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
-					<embed src="images/201811/img_27.svg" type="image/svg+xml" class="stl_03" />
+				<object data="http://35.240.140.159/images/201811/images/201811/img_27.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
+					<embed src="http://35.240.140.159/images/201811/images/201811/img_27.svg" type="image/svg+xml" class="stl_03" />
 				</object>
 			</div>
 			<div class="layer">
@@ -799,8 +800,8 @@
 		</div>
 		<div class="stl_01">
 			<div class="stl_02">
-				<object data="images/201811/img_30.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
-					<embed src="images/201811/img_30.svg" type="image/svg+xml" class="stl_03" />
+				<object data="http://35.240.140.159/images/201811/images/201811/img_30.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
+					<embed src="http://35.240.140.159/images/201811/images/201811/img_30.svg" type="image/svg+xml" class="stl_03" />
 				</object>
 			</div>
 			<div class="layer">
@@ -828,8 +829,8 @@
 		</div>
 		<div class="stl_01">
 			<div class="stl_02">
-				<object data="images/201811/img_32.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
-					<embed src="images/201811/img_32.svg" type="image/svg+xml" class="stl_03" />
+				<object data="http://35.240.140.159/images/201811/images/201811/img_32.svg" type="image/svg+xml" class="stl_03" style="position:absolute; width:98em; height:129.3333em;">
+					<embed src="http://35.240.140.159/images/201811/images/201811/img_32.svg" type="image/svg+xml" class="stl_03" />
 				</object>
 			</div>
 			<div class="layer">
