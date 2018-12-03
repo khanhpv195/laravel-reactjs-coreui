@@ -11,22 +11,23 @@ export default {
     },
     {
       name: 'Đơn hàng',
-      url: '',
+      url: '/order',
       icon: 'icon-puzzle',
+
     },
     {
       name: 'Sản phẩm',
-      url: '',
+      url: '/product',
       icon: 'icon-puzzle',
     },
     {
       name: 'Khách hàng',
-      url: '',
+      url: '/customer',
       icon: 'icon-puzzle',
     },
     {
       name: 'Doanh số',
-      url: '',
+      url: '/sale',
       icon: 'icon-puzzle',
     }
   ]

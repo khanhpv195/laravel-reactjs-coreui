@@ -12,8 +12,8 @@ class EmailController extends Controller
     $input = $request->all();
     set_time_limit(0);
     ini_set('max_execution_time', 300);
-        Mail::send('email.template', array('name'=>$input["name"],'email'=>$input["email"], 'content'=>$input['comment']), function($message){
-	        $message->to('hanbisoftdevvn@gmail.com', 'Visitor')->subject('Visitor Feedback!');
+        Mail::send('email.template', array('email'=>$input["email"]), function($message){
+	        $message->to($input["email"], 'Visitor')->subject('Visitor Feedback!');
 	    });
         Session::flash('flash_message', 'Send message successfully!');
 

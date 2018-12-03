@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 Route::get('/', function () {
-    return view('email.template');
+    return view('welcome');
 });
 
 Route::get('/email',function(){

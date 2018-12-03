@@ -1,14 +1,19 @@
-{!! Form::open(array('route' => 'front.fb', 'class' => '')) !!}
-    <div>
-        <label  class="email">Your name</label>
-            {!! Form::text('name', null, ['class' => 'input-text', 'placeholder'=>"Your name"]) !!}
-    </div><div>
-        <label  class="email">Your email</label>
-            {!! Form::text('email', null, ['class' => 'input-text', 'placeholder'=>"Your email"]) !!}
-    </div><div>
-        <label class="email">Comments</label>
-            {!! Form::textarea('comment', null, ['class' => 'tarea', 'rows'=>"5"]) !!}
-    </div><div class="send">
-        {!! Form::submit('Send', ['class' => 'button']) !!}
-    </div>
-    {!! Form::close() !!}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="{{ route('front.fb') }}" method="POST">
+            @csrf
+            <div class="class="form-group"">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </body>
+    </html>

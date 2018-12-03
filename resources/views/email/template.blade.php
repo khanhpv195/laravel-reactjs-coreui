@@ -4,7 +4,10 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>
-		</title>
+        </title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="pdf2htmlEX"/>
 		<link rel="stylesheet" type="text/css" href="http://35.240.140.159/images/201811/style.css" />
 	</head>
 	<body>
