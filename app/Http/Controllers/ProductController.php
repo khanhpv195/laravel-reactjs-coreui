@@ -4,9 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
-
+use App\Repositories\Eloquent\ProductEloquentRepository;
 class ProductController extends Controller
 {
+    protected $productRepository;
+
+    function __construct(
+        ProductEloquentRepository $productRepository
+
+    )
+    {
+        // parent::__construct();
+        $this->ProductEloquentRepository = $productRepository;
+
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +27,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+        $products = $this->ProductEloquentRepository->all();
 
         return response()->json($products);
     }
@@ -98,7 +111,7 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $product->delete();
-        
+
         return response()->json('Product Deleted Successfully.');
     }
 }

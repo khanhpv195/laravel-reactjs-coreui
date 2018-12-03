@@ -95555,67 +95555,12 @@ var Header = function (_Component) {
               { href: '#' },
               'Dashboard'
             )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_2_reactstrap__["u" /* NavItem */],
-            { className: 'px-3' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_2_reactstrap__["v" /* NavLink */],
-              { href: '#' },
-              'Users'
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_2_reactstrap__["u" /* NavItem */],
-            { className: 'px-3' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_2_reactstrap__["v" /* NavLink */],
-              { href: '#' },
-              'Settings'
-            )
           )
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_2_reactstrap__["t" /* Nav */],
           { className: 'ml-auto', navbar: true },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_2_reactstrap__["u" /* NavItem */],
-            { className: 'd-md-down-none' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_2_reactstrap__["v" /* NavLink */],
-              { href: '#' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'icon-bell' }),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_2_reactstrap__["a" /* Badge */],
-                { pill: true, color: 'danger' },
-                '5'
-              )
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_2_reactstrap__["u" /* NavItem */],
-            { className: 'd-md-down-none' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_2_reactstrap__["v" /* NavLink */],
-              { href: '#' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'icon-list' })
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_2_reactstrap__["u" /* NavItem */],
-            { className: 'd-md-down-none' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_2_reactstrap__["v" /* NavLink */],
-              { href: '#' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'icon-location-pin' })
-            )
-          ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__HeaderDropdown__["a" /* default */], null)
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_2_reactstrap__["x" /* NavbarToggler */],
-          { className: 'd-md-down-none', onClick: this.asideToggle },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'navbar-toggler-icon' })
         )
       );
     }
@@ -95680,7 +95625,7 @@ var HeaderDropdown = function (_Component) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_1_reactstrap__["p" /* DropdownToggle */],
           { nav: true },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/6.jpg', className: 'img-avatar', alt: 'admin@bootstrapmaster.com' })
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'img/avatars/8.jpg', className: 'img-avatar', alt: 'SKTT1 BLACK' })
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_1_reactstrap__["o" /* DropdownMenu */],
@@ -112816,13 +112761,14 @@ var Customer = function (_Component) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_reactstrap__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Header___ = __webpack_require__(815);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Sidebar___ = __webpack_require__(817);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Breadcrumb___ = __webpack_require__(823);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Aside___ = __webpack_require__(825);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Footer___ = __webpack_require__(826);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_reactstrap__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Header___ = __webpack_require__(815);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Sidebar___ = __webpack_require__(817);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Breadcrumb___ = __webpack_require__(823);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Aside___ = __webpack_require__(825);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Footer___ = __webpack_require__(826);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_axios__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_axios__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -112842,156 +112788,188 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var Product = function (_Component) {
-  _inherits(Product, _Component);
+    _inherits(Product, _Component);
 
-  function Product() {
-    _classCallCheck(this, Product);
+    function Product(props) {
+        _classCallCheck(this, Product);
 
-    return _possibleConstructorReturn(this, (Product.__proto__ || Object.getPrototypeOf(Product)).apply(this, arguments));
-  }
+        var _this = _possibleConstructorReturn(this, (Product.__proto__ || Object.getPrototypeOf(Product)).call(this, props));
 
-  _createClass(Product, [{
-    key: 'render',
-    value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: 'app' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Header___["a" /* default */], null),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'app-body' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Sidebar___["a" /* default */], this.props),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'main',
-            { className: 'main' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__components_Breadcrumb___["a" /* default */], null),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_2_reactstrap__["l" /* Container */],
-              { fluid: true },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_2_reactstrap__["z" /* Row */],
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  __WEBPACK_IMPORTED_MODULE_2_reactstrap__["k" /* Col */],
-                  { xs: '12', lg: '12' },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2_reactstrap__["g" /* Card */],
-                    null,
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      __WEBPACK_IMPORTED_MODULE_2_reactstrap__["j" /* CardHeader */],
-                      null,
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-align-justify' }),
-                      ' Product'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      __WEBPACK_IMPORTED_MODULE_2_reactstrap__["h" /* CardBody */],
-                      null,
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_reactstrap__["C" /* Table */],
-                        { className: 'table table-responsive-sm table-striped' },
+        _this.state = { products: '' };
+        _this.handleDelete = _this.handleDelete.bind(_this);
+        return _this;
+    }
+
+    _createClass(Product, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            this.callApi();
+        }
+    }, {
+        key: 'callApi',
+        value: function callApi() {
+            var _this2 = this;
+
+            __WEBPACK_IMPORTED_MODULE_7_axios___default.a.get('http://127.0.0.1:8000/product').then(function (response) {
+                _this2.setState({ products: response.data });
+                console.log(_this2.state.products);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
+    }, {
+        key: 'handleDelete',
+        value: function handleDelete(e) {
+            var _this3 = this;
+
+            var id = e;
+            var url = 'http://127.0.0.1:8000/product/' + id;
+            if (!confirm('Are your sure you want to delete this item?')) {
+                return false;
+            }
+            __WEBPACK_IMPORTED_MODULE_7_axios___default.a.delete(url).then(function (response) {
+                _this3.callApi();
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
+    }, {
+        key: 'fetchRows',
+        value: function fetchRows() {
+            var _this4 = this;
+
+            if (this.state.products instanceof Array) {
+                return this.state.products.map(function (object, i) {
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'tr',
+                        { key: i },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'thead',
-                          null,
-                          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'tr',
+                            'td',
                             null,
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                              'th',
-                              null,
-                              'Username'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                              'th',
-                              null,
-                              'Date registered'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                              'th',
-                              null,
-                              'Role'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                              'th',
-                              null,
-                              'Status'
-                            )
-                          )
+                            object.id
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'tbody',
-                          null,
-                          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'tr',
+                            'td',
+                            null,
+                            object.title
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'td',
+                            null,
+                            object.body
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'td',
+                            null,
+                            object.created_at
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'td',
                             null,
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                              'td',
-                              null,
-                              'Samppa Nori'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                              'td',
-                              null,
-                              '2012/01/01'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                              'td',
-                              null,
-                              'Member'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                              'td',
-                              null,
-                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_2_reactstrap__["a" /* Badge */],
-                                { color: 'success' },
-                                'Active'
-                              )
+                                'button',
+                                { onClick: function onClick() {
+                                        return _this4.handleDelete(object.id);
+                                    }, className: 'btn  btn-danger  btn-sm', type: 'button' },
+                                'Delete'
                             )
-                          ),
-                          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'tr',
-                            null,
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                              'td',
-                              null,
-                              'Estavan Lykos'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                              'td',
-                              null,
-                              '2012/02/01'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                              'td',
-                              null,
-                              'Staff'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                              'td',
-                              null,
-                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_2_reactstrap__["a" /* Badge */],
-                                { color: 'danger' },
-                                'Banned'
-                              )
-                            )
-                          )
                         )
-                      )
-                    )
-                  )
-                )
-              )
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__components_Aside___["a" /* default */], null)
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__components_Footer___["a" /* default */], null)
-      );
-    }
-  }]);
+                    );
+                });
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'app' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Header___["a" /* default */], null),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'app-body' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Sidebar___["a" /* default */], this.props),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'main',
+                        { className: 'main' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Breadcrumb___["a" /* default */], null),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_1_reactstrap__["l" /* Container */],
+                            { fluid: true },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                __WEBPACK_IMPORTED_MODULE_1_reactstrap__["z" /* Row */],
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    __WEBPACK_IMPORTED_MODULE_1_reactstrap__["k" /* Col */],
+                                    { xs: '12', lg: '12' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        __WEBPACK_IMPORTED_MODULE_1_reactstrap__["g" /* Card */],
+                                        null,
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            __WEBPACK_IMPORTED_MODULE_1_reactstrap__["j" /* CardHeader */],
+                                            null,
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-align-justify' }),
+                                            ' Product'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            __WEBPACK_IMPORTED_MODULE_1_reactstrap__["h" /* CardBody */],
+                                            null,
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                __WEBPACK_IMPORTED_MODULE_1_reactstrap__["C" /* Table */],
+                                                { className: 'table table-responsive-sm table-striped' },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'thead',
+                                                    null,
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'tr',
+                                                        null,
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                            'th',
+                                                            null,
+                                                            'ID'
+                                                        ),
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                            'th',
+                                                            null,
+                                                            'Product Name'
+                                                        ),
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                            'th',
+                                                            null,
+                                                            'Content'
+                                                        ),
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                            'th',
+                                                            null,
+                                                            'Created at'
+                                                        ),
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                            'th',
+                                                            null,
+                                                            'Action '
+                                                        )
+                                                    )
+                                                ),
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'tbody',
+                                                    null,
+                                                    this.fetchRows()
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__components_Aside___["a" /* default */], null)
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__components_Footer___["a" /* default */], null)
+            );
+        }
+    }]);
 
-  return Product;
+    return Product;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 /* harmony default export */ __webpack_exports__["a"] = (Product);
