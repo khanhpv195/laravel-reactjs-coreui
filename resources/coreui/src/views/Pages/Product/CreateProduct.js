@@ -28,42 +28,43 @@ class CreateProduct extends Component {
             showMyComponent: false
         }
 
-        this.handleTitle = this.handleTitle.bind(this)
-        this.handleBody = this.handleBody.bind(this)
+        this.handleOnChange = this.handleOnChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
-    handleTitle(e) {
+    handleOnChange(e) {
         this.setState({
-            title: e.target.value
-        })
-    }
-    handleBody(e) {
-        this.setState({
-            body: e.target.value
+            [e.target.name]: e.target.value
         })
     }
 
-    handleSubmit(e) {
+    async handleSubmit(e) {
         e.preventDefault();
         const data = {
             title: this.state.title,
             body: this.state.body
         }
-
-        axios.post('/api/products', data)
-            .then(function (response) {
-                this.props.history.push('/product')
+        try {
+            const response = await axios.post('/api/products', data);
+            console.log(response)
+            this.setState({
+                title: '',
+                body: '',
+                showMyComponent:true
+            }, () => {
+                console.log(this.state)
             })
-            .catch(function (error) {
-                console.log(error);
-            });
+        } catch (error) {
+            console.error(error);
+        }
     }
+
+
 
     render() {
         const MessagessBox = () => {
             return (
                 <Alert color="success" style={this.state.showMyComponent ? {} : { display: 'none' }}>
-                    This is a success alert — check it out!
+                    Create a success alert — check it out!
               </Alert>
             )
         }
@@ -90,8 +91,9 @@ class CreateProduct extends Component {
                                                         <FormGroup>
                                                             <Label htmlFor="name">Title</Label>
                                                             <Input type="text" id="title" placeholder="Enter your title" required
-                                                                defaultValue={this.state.title}
-                                                                onChange={this.handleTitle}
+                                                                name="title"
+                                                                value={this.state.title}
+                                                                onChange={this.handleOnChange}
                                                             />
                                                         </FormGroup>
                                                     </Col>
@@ -99,8 +101,9 @@ class CreateProduct extends Component {
                                                         <FormGroup>
                                                             <Label htmlFor="name">Body</Label>
                                                             <Input type="text" id="body" placeholder="Enter your body" required
-                                                                defaultValue={this.state.body}
-                                                                onChange={this.handleBody}
+                                                                name="body"
+                                                                value={this.state.body}
+                                                                onChange={this.handleOnChange}
                                                             />
                                                         </FormGroup>
                                                     </Col>
