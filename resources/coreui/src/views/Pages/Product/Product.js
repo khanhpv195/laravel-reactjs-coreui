@@ -5,13 +5,15 @@ import Sidebar from '../../../components/Sidebar/';
 import Breadcrumb from '../../../components/Breadcrumb/';
 import Aside from '../../../components/Aside/';
 import Footer from '../../../components/Footer/';
-import axios from 'axios'
+import axios from 'axios';
+import ReactPaginate from 'react-paginate';
+import  {Link}  from 'react-router-dom';
 import { Badge, Card, CardBody, CardHeader, Col, Pagination, PaginationItem, PaginationLink, Row, Table } from 'reactstrap';
 
 class Product extends Component {
     constructor(props) {
         super(props)
-        this.state = { products: '' }
+        this.state = { products: '', pageCount: '', tit: '', body: '' }
         this.handleDelete = this.handleDelete.bind(this)
     }
     componentDidMount() {
@@ -19,9 +21,10 @@ class Product extends Component {
     }
 
     callApi() {
-        axios.get('http://127.0.0.1:8000/product')
+        axios.get('http://127.0.0.1:8000/api/products')
             .then(response => {
                 this.setState({ products: response.data })
+                this.setState({ products: response.data });
                 console.log(this.state.products)
             })
             .catch(function (error) {
@@ -30,7 +33,7 @@ class Product extends Component {
     }
     handleDelete(e) {
         let id = e;
-        let url = 'http://127.0.0.1:8000/product/' + id
+        let url = 'http://127.0.0.1:8000/api/products/' + id
         if (!confirm('Are your sure you want to delete this item?')) {
             return false
         }
@@ -42,16 +45,22 @@ class Product extends Component {
                 console.log(error)
             })
     }
+
+
     fetchRows() {
         if (this.state.products instanceof Array) {
             return this.state.products.map((object, i) => {
+
                 return (
-                    <tr key={i}><td>{object.id}</td><td>{object.title}</td><td>{object.body}</td><td>{object.created_at}</td><td><button onClick={() => this.handleDelete(object.id)} className="btn  btn-danger  btn-sm" type="button">Delete</button></td></tr>
+                    <tr key={i}><td>{object.id}</td><td>{object.title}</td><td>{object.body}</td><td>{object.created_at}</td><td><button onClick={() => this.handleEdit(object.id)} className="btn  btn-info active  btn-sm" type="button">Edit</button></td><td><button onClick={() => this.handleDelete(object.id)} className="btn  btn-danger  btn-sm" type="button">Delete</button></td></tr>
                 )
             })
         }
     }
+    handleEdit(e) {
 
+
+    }
 
     render() {
         return (
@@ -62,6 +71,12 @@ class Product extends Component {
                     <main className="main">
                         <Breadcrumb />
                         <Container fluid>
+
+                            <Row>
+                                <Col xs="12" lg="12">
+                                <Link className='btn btn-success pull-right' to='/product/create'>Add User</Link>
+                                </Col>
+                            </Row>
                             <Row>
                                 <Col xs="12" lg="12">
                                     <Card>
@@ -76,7 +91,8 @@ class Product extends Component {
                                                         <th>Product Name</th>
                                                         <th>Content</th>
                                                         <th>Created at</th>
-                                                        <th>Action </th>
+                                                        <th>Update</th>
+                                                        <th>Delete </th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -87,6 +103,16 @@ class Product extends Component {
                                     </Card>
                                 </Col>
                             </Row>
+                            <ReactPaginate previousLabel={"previous"}
+                                nextLabel={"next"}
+                                breakLabel={"..."}
+                                breakClassName={"break-me"}
+                                pageCount={5}
+                                marginPagesDisplayed={2}
+                                pageRangeDisplayed={5}
+                                containerClassName={"pagination"}
+                                subContainerClassName={"pages pagination"}
+                                activeClassName={"active"} />
                         </Container>
                     </main>
                     <Aside />

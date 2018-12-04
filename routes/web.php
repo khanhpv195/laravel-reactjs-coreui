@@ -25,4 +25,4 @@ Route::get('/email',function(){
 Route::post('/message/send', ['uses' => 'EmailController@sendMail', 'as' => 'front.fb']);
 // Auth::routes();
 
-Route::resource('/product','ProductController');
+Route::resource('/api/products','ProductController');
