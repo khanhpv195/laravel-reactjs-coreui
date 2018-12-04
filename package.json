@@ -44,6 +44,7 @@
     },
     "dependencies": {
         "@coreui/coreui": "^2.0.22",
+        "history": "^4.7.2",
         "react-bootstrap": "^0.32.4",
         "react-laravel-paginator": "^0.1.6",
         "react-paginate": "^6.0.0",

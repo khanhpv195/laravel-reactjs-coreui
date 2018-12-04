@@ -74,7 +74,7 @@ class Product extends Component {
 
                             <Row>
                                 <Col xs="12" lg="12">
-                                <Link className='btn btn-success pull-right' to='/product/create'>Add User</Link>
+                                <Link className='btn btn-success pull-right' to='/product/create'>Add Product</Link>
                                 </Col>
                             </Row>
                             <Row>
