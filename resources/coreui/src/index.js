@@ -27,6 +27,7 @@ import Customer from './views/Pages/Customer/'
 import Product from './views/Pages/Product/'
 import Sale from './views/Pages/Sale/'
 import CreateProduct from './views/Pages/Product/CreateProduct.js'
+import EditProduct from './views/Pages/Product/EditProduct.js'
 
 ReactDOM.render((
   <Router>
@@ -40,6 +41,7 @@ ReactDOM.render((
       <Route exact path="/sale" name="Page Sale" component={Sale}/>
       <Route exact path="/product" name="Page Product" component={Product}/>
       <Route exact path="/product/create" name="Page Create Product" component={CreateProduct}/>
+      <Route exact path="/products/edit/:id" name="Page Edit Product" component={EditProduct}/>
       <Route path="/" name="Home" component={Full}/>
 
     </Switch>

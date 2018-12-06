@@ -52,7 +52,9 @@ class Product extends Component {
             return this.state.products.map((object, i) => {
 
                 return (
-                    <tr key={i}><td>{object.id}</td><td>{object.title}</td><td>{object.body}</td><td>{object.created_at}</td><td><button onClick={() => this.handleEdit(object.id)} className="btn  btn-info active  btn-sm" type="button">Edit</button></td><td><button onClick={() => this.handleDelete(object.id)} className="btn  btn-danger  btn-sm" type="button">Delete</button></td></tr>
+                    <tr key={i}><td>{object.id}</td><td>{object.title}</td><td>{object.body}</td><td>{object.created_at}</td><td>
+                    <Link className="btn  btn-info active  btn-sm" to={'/products/edit/'+object.id}>Edit</Link>
+                    </td><td><button onClick={() => this.handleDelete(object.id)} className="btn  btn-danger  btn-sm" type="button">Delete</button></td></tr>
                 )
             })
         }
