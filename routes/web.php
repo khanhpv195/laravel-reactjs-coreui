@@ -14,9 +14,6 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/email',function(){
     return view('email.email');
@@ -24,5 +21,14 @@ Route::get('/email',function(){
 
 Route::post('/message/send', ['uses' => 'EmailController@sendMail', 'as' => 'front.fb']);
 // Auth::routes();
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', function () {
+        return view('welcome');
+    });
 
-Route::resource('/api/products','ProductController');
+    Route::resource('/api/products','ProductController');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

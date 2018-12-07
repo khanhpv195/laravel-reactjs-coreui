@@ -13,7 +13,7 @@ import { Badge, Card, CardBody, CardHeader, Col, Pagination, PaginationItem, Pag
 class Product extends Component {
     constructor(props) {
         super(props)
-        this.state = { products: '', pageCount: '', tit: '', body: '' }
+        this.state = { products: '', pageCount: 0, tit: '', body: '' }
         this.handleDelete = this.handleDelete.bind(this)
     }
     componentDidMount() {
@@ -23,8 +23,8 @@ class Product extends Component {
     callApi() {
         axios.get('http://127.0.0.1:8000/api/products')
             .then(response => {
-                this.setState({ products: response.data })
-                this.setState({ products: response.data });
+
+                this.setState({products: response.data});
                 console.log(this.state.products)
             })
             .catch(function (error) {
@@ -109,9 +109,9 @@ class Product extends Component {
                                 nextLabel={"next"}
                                 breakLabel={"..."}
                                 breakClassName={"break-me"}
-                                pageCount={5}
+                                pageCount={3}
                                 marginPagesDisplayed={2}
-                                pageRangeDisplayed={5}
+                                pageRangeDisplayed={2}
                                 containerClassName={"pagination"}
                                 subContainerClassName={"pages pagination"}
                                 activeClassName={"active"} />
