@@ -27,8 +27,9 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::resource('/api/products','ProductController');
-});
 
+});
+Route::resource('/api/recipe','RecipeController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
