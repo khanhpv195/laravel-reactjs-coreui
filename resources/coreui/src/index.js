@@ -25,6 +25,7 @@ import Page500 from './views/Pages/Page500/'
 import Product from './views/Pages/Product/'
 import Recipe from './views/Pages/Recipe/'
 import CreateRecipe from './views/Pages/Recipe/CreateRecipe.js'
+import ShowRecipe from './views/Pages/Recipe/ShowRecipe.js'
 import CreateProduct from './views/Pages/Product/CreateProduct.js'
 import EditProduct from './views/Pages/Product/EditProduct.js'
 
@@ -40,6 +41,7 @@ ReactDOM.render((
       <Route exact path="/products/edit/:id" name="Page Edit Product" component={EditProduct}/>
       <Route exact path="/recipe" name="Page Recipe" component={Recipe}/>
       <Route exact path="/recipe/create" name="Page Create Recipe" component={CreateRecipe}/>
+      <Route exact path="/recipe/show/:id" name="Page Show Recipe" component={ShowRecipe}/>
 
       <Route path="/" name="Home" component={Full}/>
 

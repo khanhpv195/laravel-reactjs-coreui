@@ -54,7 +54,7 @@ class Recipe extends Component {
             return this.state.products.map((object, i) => {
 
                 return (
-                    <tr key={i}><td>{object.id}</td><td>{object.title}</td><td>{object.description}</td><td>{object.user_id}</td><td>{object.created_at}</td><td>
+                    <tr key={i}><td>{object.id}</td><td><Link to={'/recipe/show/'+object.id}>{object.title}</Link> </td><td><img  style={{ width:150 }} src={object.images} className="img"/></td><td>{object.user_id}</td><td>{object.created_at}</td><td>
                     <Link className="btn  btn-info active  btn-sm" to={'/products/edit/'+object.id}>Edit</Link>
                     </td><td><button onClick={() => this.handleDelete(object.id)} className="btn  btn-danger  btn-sm" type="button">Delete</button></td></tr>
                 )
@@ -67,6 +67,7 @@ class Recipe extends Component {
     }
 
     render() {
+
         return (
             <div className="app">
                 <Header />
@@ -78,7 +79,7 @@ class Recipe extends Component {
 
                             <Row>
                                 <Col xs="12" lg="12">
-                                <Link className='btn btn-success pull-right' to='/recipe/create'>Add Recipe</Link>
+                                <Link className='btn btn-success pull-left' to='/recipe/create'>Add Recipe</Link>
                                 </Col>
                             </Row>
                             <Row>
@@ -92,8 +93,8 @@ class Recipe extends Component {
                                                 <thead>
                                                     <tr>
                                                         <th>ID</th>
+                                                        <th>Images</th>
                                                         <th>Title</th>
-                                                        <th>Description</th>
                                                         <th>Author</th>
                                                         <th>Date</th>
                                                         <th>Update</th>
