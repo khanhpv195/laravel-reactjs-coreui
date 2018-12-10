@@ -17,17 +17,20 @@
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('client');
 });
+
 
 // Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
-
+    Route::get('/admin', function () {
+        return view('admin');
+    });
 
     Route::resource('/api/products','ProductController');
-
+    Route::resource('/api/recipe','RecipeController');
 });
-Route::resource('/api/recipe','RecipeController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
