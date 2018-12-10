@@ -14,5 +14,6 @@ class Recipe extends Model
         'images',
        'url_video',
        'user_id',
+       'cate_id'
     ];
 }

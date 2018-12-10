@@ -37,7 +37,8 @@ class RecipeController extends Controller
      */
     public function create()
     {
-        return view('test');
+        $recipe = $this->RecipeEloquentRepository->getCategory();
+        return response()->json($recipe);
     }
 
     /**
@@ -49,6 +50,7 @@ class RecipeController extends Controller
     public function store(Request $request)
     {
 
+        // return $request->all();
         $recipe = $this->RecipeEloquentRepository->create($request->all());
 
         return response()->json('Product Added Successfully.');

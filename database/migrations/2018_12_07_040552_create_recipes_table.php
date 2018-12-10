@@ -21,6 +21,7 @@ class CreateRecipesTable extends Migration
             $table->string('images');
             $table->string('url_video');
             $table->integer('user_id');
+            $table->integer('cate_id');
             $table->timestamps();
         });
     }

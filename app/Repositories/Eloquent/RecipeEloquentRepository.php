@@ -2,6 +2,7 @@
 namespace App\Repositories\Eloquent;
 
 use App\Recipe;
+use App\Category;
 use App\Repositories\BaseEloquentRepository;
 
 
@@ -20,5 +21,11 @@ class RecipeEloquentRepository extends BaseEloquentRepository
     {
         $result = new Recipe($data);
         return $result;
+    }
+
+    public function getCategory()
+    {
+        $category = Category::all();
+        return $category;
     }
 }

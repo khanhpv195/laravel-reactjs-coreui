@@ -16,14 +16,14 @@
 // });
 
 
-Route::get('/', function () {
-    return view('client');
-});
+// Route::get('/', function () {
+//     return view('client');
+// });
 
 
 // Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/admin', function () {
+    Route::get('/', function () {
         return view('admin');
     });
 

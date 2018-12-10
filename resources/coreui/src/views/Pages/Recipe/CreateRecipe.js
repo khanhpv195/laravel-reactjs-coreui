@@ -31,12 +31,28 @@ class CreateRecipe extends Component {
             images: '',
             url_video: '',
             user_id: '',
+            cate_id:'',
             showMyComponent: false
         }
 
         this.handleOnChange = this.handleOnChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
+    componentDidMount() {
+        this.callCategory();
+    }
+    async callCategory() {
+        let url = 'http://127.0.0.1:8000/api/recipe/create';
+        console.log(url)
+        axios.get(url)
+            .then(response => {
+                console.log(response.data)
+            })
+            .catch(function (error) {
+                console.log(error)
+            })
+    }
+
     handleOnChange(e) {
         this.setState({
             [e.target.name]: e.target.value
@@ -52,6 +68,7 @@ class CreateRecipe extends Component {
             images: this.state.images,
             url_video: this.state.url_video,
             user_id: this.state.user_id,
+            cate_id:this.state.cate_id
 
         }
         try {
@@ -64,7 +81,7 @@ class CreateRecipe extends Component {
                 images: '',
                 url_video: '',
                 user_id: '',
-                showMyComponent:true
+                showMyComponent: true
             }, () => {
             })
         } catch (error) {
@@ -115,10 +132,10 @@ class CreateRecipe extends Component {
                                                         <FormGroup>
                                                             <Label htmlFor="name">Content</Label>
                                                             <Input type="textarea" name="content" id="textarea-input" rows="9"
-                                                            placeholder="Content..."
-                                                            name="content"
-                                                            value={this.state.content}
-                                                            onChange={this.handleOnChange}
+                                                                placeholder="Content..."
+                                                                name="content"
+                                                                value={this.state.content}
+                                                                onChange={this.handleOnChange}
                                                             />
                                                         </FormGroup>
                                                     </Col>
@@ -130,6 +147,22 @@ class CreateRecipe extends Component {
                                                                 value={this.state.description}
                                                                 onChange={this.handleOnChange}
                                                             />
+                                                        </FormGroup>
+                                                    </Col>
+                                                    <Col xs="12">
+                                                        <FormGroup>
+                                                            <Label htmlFor="name">Category</Label>
+                                                                <Input type="select" value={this.state.cate_id}  name="cate_id" id="cate_id" required
+                                                                className="form-control"
+                                                                onChange={this.handleOnChange}
+                                                                >
+                                                                    <option >Please select</option>
+                                                                    <option value="1">Ăn sáng</option>
+                                                                    <option value="2">Ăn trưa</option>
+                                                                    <option value="3">Ăn tối</option>
+                                                                    <option value="4">Ăn đêm</option>
+                                                                    <option value="5">Ăn vặt</option>
+                                                                </Input>
                                                         </FormGroup>
                                                     </Col>
                                                     <Col xs="12">
@@ -157,11 +190,12 @@ class CreateRecipe extends Component {
                                                     <Col xs="12">
                                                         <FormGroup>
                                                             <Label htmlFor="name">User</Label>
-                                                            <Input type="number" id="user_id" placeholder="Enter your id" required
-                                                                name="user_id"
-                                                                value={this.state.user_id}
-                                                                onChange={this.handleOnChange}
-                                                            />
+                                                            <Input type="select" value={this.state.user_id}  name="user_id" id="user_id" required
+                                                            className="form-control"
+                                                            onChange={this.handleOnChange}
+                                                            >
+                                                                <option value="1">Admin</option>
+                                                            </Input>
                                                         </FormGroup>
                                                     </Col>
                                                     <Col xs="12">
