@@ -19,7 +19,8 @@ import {
     Alert,
     FormText
 } from 'reactstrap';
-
+import styles from './DashedBox.css';
+import { ClipLoader } from 'react-spinners';
 class EditRecipe extends Component {
     constructor(props) {
         super(props)
@@ -32,7 +33,8 @@ class EditRecipe extends Component {
             url_video: '',
             user_id: '',
             cate_id:'',
-            showMyComponent: false
+            showMyComponent: false,
+            loading:true
         }
 
         this.handleOnChange = this.handleOnChange.bind(this)
@@ -44,6 +46,7 @@ class EditRecipe extends Component {
         axios.get(url)
           .then(response => {
             this.setState(response.data)
+            this.setState({loading:false})
             console.log(response.data)
           })
           .catch(function (error) {
@@ -60,6 +63,7 @@ class EditRecipe extends Component {
 
     async handleSubmit(e) {
         e.preventDefault();
+
         const data = {
             title: this.state.title,
             description: this.state.description,
@@ -74,7 +78,9 @@ class EditRecipe extends Component {
         axios.patch(url, data)
           .then(response => {
             this.setState({
-                showMyComponent:true
+                showMyComponent:true,
+                loading:false
+
             })
           })
           .catch(function (error) {
@@ -106,11 +112,19 @@ class EditRecipe extends Component {
                                     <form onSubmit={this.handleSubmit}>
                                         <Card>
                                             <CardHeader>
-                                                <strong>Create Product</strong>
+                                                <strong>Edit Recipe</strong>
 
                                             </CardHeader>
                                             <CardBody>
+                                            <ClipLoader
+                                            className={styles.override}
+                                            sizeUnit={"px"}
+                                            size={50}
+                                            color={'#39b2d5'}
+                                            loading={this.state.loading}
+                                          />
                                                 <Row>
+
                                                     <Col xs="12">
                                                         <FormGroup>
                                                             <Label htmlFor="name">Title</Label>
@@ -183,7 +197,7 @@ class EditRecipe extends Component {
                                                     <Col xs="12">
                                                         <FormGroup>
                                                             <Label htmlFor="name">User</Label>
-                                                            <Input type="select" value={this.state.user_id}  name="user_id" id="user_id" required
+                                                            <Input type="select" value={this.state.user_id}  name="user_id" id="user_id" disabled
                                                             className="form-control"
                                                             onChange={this.handleOnChange}
                                                             >
@@ -193,7 +207,7 @@ class EditRecipe extends Component {
                                                         </FormGroup>
                                                     </Col>
                                                     <Col xs="12">
-                                                        <button type='submit' className="btn btn-lg btn-primary">Create</button>
+                                                        <button  type='submit' className="btn btn-lg btn-primary">Edit</button>
                                                     </Col>
                                                 </Row>
 

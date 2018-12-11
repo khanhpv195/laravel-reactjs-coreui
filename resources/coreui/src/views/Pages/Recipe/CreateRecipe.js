@@ -6,7 +6,8 @@ import Sidebar from '../../../components/Sidebar/';
 import Breadcrumb from '../../../components/Breadcrumb/';
 import Aside from '../../../components/Aside/';
 import Footer from '../../../components/Footer/';
-
+import styles from './DashedBox.css';
+import { ClipLoader } from 'react-spinners';
 import {
     Card,
     CardBody,
@@ -32,7 +33,8 @@ class CreateRecipe extends Component {
             url_video: '',
             user_id: '',
             cate_id:'',
-            showMyComponent: false
+            showMyComponent: false,
+            loading:false
         }
 
         this.handleOnChange = this.handleOnChange.bind(this)
@@ -108,12 +110,19 @@ class CreateRecipe extends Component {
                         <Breadcrumb />
                         <Container fluid>
                             <MessagessBox />
+                            <ClipLoader
+                            className={styles.override}
+                            sizeUnit={"px"}
+                            size={50}
+                            color={'#123abc'}
+                            loading={this.state.loading}
+                          />
                             <Row>
                                 <Col xs="12" sm="12">
                                     <form onSubmit={this.handleSubmit}>
                                         <Card>
                                             <CardHeader>
-                                                <strong>Create Product</strong>
+                                                <strong>Create Recipe</strong>
 
                                             </CardHeader>
                                             <CardBody>

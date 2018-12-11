@@ -9,12 +9,13 @@ import axios from 'axios';
 import ReactPaginate from 'react-paginate';
 import  {Link}  from 'react-router-dom';
 import Setting from '../../../constant/setting.js'
+import { ClipLoader} from 'react-spinners';
 import { Badge, Card, CardBody, CardHeader, Col, Pagination, PaginationItem, PaginationLink, Row, Table } from 'reactstrap';
-
+import styles from './DashedBox.css';
 class Recipe extends Component {
     constructor(props) {
         super(props)
-        this.state = { products: '', pageCount: 0, tit: '', body: '' }
+        this.state = { loading: true,products: '', pageCount: 0, tit: '', body: '' }
         this.handleDelete = this.handleDelete.bind(this)
     }
     componentDidMount() {
@@ -26,7 +27,7 @@ class Recipe extends Component {
         axios.get(url)
             .then(response => {
 
-                this.setState({products: response.data});
+                this.setState({products: response.data,loading:false});
                 console.log(this.state.products)
             })
             .catch(function (error) {
@@ -69,7 +70,10 @@ class Recipe extends Component {
     render() {
 
         return (
+
             <div className="app">
+
+
                 <Header />
                 <div className="app-body">
                     <Sidebar {...this.props} />
@@ -89,6 +93,13 @@ class Recipe extends Component {
                                             <i className="fa fa-align-justify"></i>Recipe
                                         </CardHeader>
                                         <CardBody>
+                                        <ClipLoader
+                                        className={styles.override}
+                                        sizeUnit={"px"}
+                                        size={50}
+                                        color={'#39b2d5'}
+                                        loading={this.state.loading}
+                                      />
                                             <Table className="table table-responsive-sm table-striped">
                                                 <thead>
                                                     <tr>
@@ -102,6 +113,7 @@ class Recipe extends Component {
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+
                                                     {this.fetchRows()}
                                                 </tbody>
                                             </Table>
