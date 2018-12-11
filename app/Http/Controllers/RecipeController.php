@@ -76,9 +76,9 @@ class RecipeController extends Controller
      */
     public function edit($id)
     {
-        $recipe = $this->RecipeEloquentRepository->update($request->all(),$id);
+        $recipe = $this->RecipeEloquentRepository->find($id);
 
-        return response()->json('Product Delete Successfully.');
+        return response()->json($recipe);
     }
 
     /**
@@ -92,7 +92,7 @@ class RecipeController extends Controller
     {
         $recipe = $this->RecipeEloquentRepository->update($request->all(),$id);
 
-        return response()->json('Product Delete Successfully.');
+        return response()->json('Product Update Successfully.');
     }
 
     /**

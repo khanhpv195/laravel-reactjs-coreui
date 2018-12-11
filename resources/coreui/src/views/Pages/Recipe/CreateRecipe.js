@@ -194,6 +194,7 @@ class CreateRecipe extends Component {
                                                             className="form-control"
                                                             onChange={this.handleOnChange}
                                                             >
+                                                                <option >Please select</option>
                                                                 <option value="1">Admin</option>
                                                             </Input>
                                                         </FormGroup>

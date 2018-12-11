@@ -55,7 +55,7 @@ class Recipe extends Component {
 
                 return (
                     <tr key={i}><td>{object.id}</td><td><Link to={'/recipe/show/'+object.id}>{object.title}</Link> </td><td><img  style={{ width:150 }} src={object.images} className="img"/></td><td>{object.user_id}</td><td>{object.created_at}</td><td>
-                    <Link className="btn  btn-info active  btn-sm" to={'/products/edit/'+object.id}>Edit</Link>
+                    <Link className="btn  btn-info active  btn-sm" to={'/recipe/edit/'+object.id}>Edit</Link>
                     </td><td><button onClick={() => this.handleDelete(object.id)} className="btn  btn-danger  btn-sm" type="button">Delete</button></td></tr>
                 )
             })
