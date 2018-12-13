@@ -14,6 +14,17 @@ export default {
       url: '/recipe',
       icon: 'icon-puzzle',
 
+    },
+    {
+      name: 'Category',
+      url: '/product',
+      icon: 'icon-puzzle',
+
+    },
+    {
+      name: 'User',
+      url: '/recipe',
+      icon: 'icon-puzzle',
     }
   ]
 };
