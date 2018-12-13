@@ -67,6 +67,12 @@ class RecipeController extends Controller
         $recipe = $this->RecipeEloquentRepository->find($id);
         return response()->json($recipe);
     }
+    public function showPost($id)
+    {
+        $recipe = $this->RecipeEloquentRepository->find($id);
+        // return $recipe;die;
+         return view('recipe.show',compact('recipe'));
+    }
 
     /**
      * Show the form for editing the specified resource.

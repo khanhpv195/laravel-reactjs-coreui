@@ -43,9 +43,13 @@
         "simple-line-icons": "^2.4.1"
     },
     "dependencies": {
+        "@ckeditor/ckeditor5-build-classic": "^11.2.0",
+        "@ckeditor/ckeditor5-react": "^1.1.0",
         "@coreui/coreui": "^2.0.22",
         "history": "^4.7.2",
         "react-bootstrap": "^0.32.4",
+        "react-ckeditor-component": "^1.1.0",
+        "react-flash-message": "^1.0.2",
         "react-laravel-paginator": "^0.1.6",
         "react-paginate": "^6.0.0",
         "react-router-dom": "^4.3.1",

@@ -104,8 +104,8 @@ class Recipe extends Component {
                                                 <thead>
                                                     <tr>
                                                         <th>ID</th>
-                                                        <th>Images</th>
                                                         <th>Title</th>
+                                                        <th>Images</th>
                                                         <th>Author</th>
                                                         <th>Date</th>
                                                         <th>Update</th>

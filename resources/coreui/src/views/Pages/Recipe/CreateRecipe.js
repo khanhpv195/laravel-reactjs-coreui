@@ -20,7 +20,7 @@ import {
     Alert,
     FormText
 } from 'reactstrap';
-
+import CKEditor from "react-ckeditor-component";
 class CreateRecipe extends Component {
     constructor(props) {
         super(props)
@@ -32,9 +32,12 @@ class CreateRecipe extends Component {
             images: '',
             url_video: '',
             user_id: '',
-            cate_id:'',
+            cate_id: '',
             showMyComponent: false,
-            loading:false
+            showMyEror: false,
+
+            loading: false,
+
         }
 
         this.handleOnChange = this.handleOnChange.bind(this)
@@ -70,7 +73,7 @@ class CreateRecipe extends Component {
             images: this.state.images,
             url_video: this.state.url_video,
             user_id: this.state.user_id,
-            cate_id:this.state.cate_id
+            cate_id: this.state.cate_id
 
         }
         try {
@@ -87,7 +90,9 @@ class CreateRecipe extends Component {
             }, () => {
             })
         } catch (error) {
-            console.error(error);
+            this.setState({
+                showMyEror: true
+            })
         }
     }
 
@@ -101,6 +106,13 @@ class CreateRecipe extends Component {
               </Alert>
             )
         }
+        const MessagessEror = () => {
+            return (
+                <Alert color="danger" style={this.state.showMyEror ? {} : { display: 'none' }}>
+                    Create a error alert — check it out!
+              </Alert>
+            )
+        }
         return (
             <div className="app">
                 <Header />
@@ -110,13 +122,14 @@ class CreateRecipe extends Component {
                         <Breadcrumb />
                         <Container fluid>
                             <MessagessBox />
+                            <MessagessEror/>
                             <ClipLoader
-                            className={styles.override}
-                            sizeUnit={"px"}
-                            size={50}
-                            color={'#123abc'}
-                            loading={this.state.loading}
-                          />
+                                className={styles.override}
+                                sizeUnit={"px"}
+                                size={50}
+                                color={'#123abc'}
+                                loading={this.state.loading}
+                            />
                             <Row>
                                 <Col xs="12" sm="12">
                                     <form onSubmit={this.handleSubmit}>
@@ -138,43 +151,28 @@ class CreateRecipe extends Component {
                                                         </FormGroup>
                                                     </Col>
                                                     <Col xs="12">
+                                                    <FormGroup>
+                                                        <Label htmlFor="name">Description</Label>
+                                                        <Input type="text" id="body" placeholder="Enter your description" required
+                                                            name="description"
+                                                            value={this.state.description}
+                                                            onChange={this.handleOnChange}
+                                                        />
+                                                    </FormGroup>
+                                                </Col>
+                                                    <Col xs="12">
                                                         <FormGroup>
-                                                            <Label htmlFor="name">Content</Label>
-                                                            <Input type="textarea" name="content" id="textarea-input" rows="9"
-                                                                placeholder="Content..."
+                                                            <Label htmlFor="content">Content</Label>
+                                                            <Input type="textarea" id="content" placeholder="Enter your content" required
                                                                 name="content"
                                                                 value={this.state.content}
                                                                 onChange={this.handleOnChange}
                                                             />
                                                         </FormGroup>
                                                     </Col>
-                                                    <Col xs="12">
-                                                        <FormGroup>
-                                                            <Label htmlFor="name">Description</Label>
-                                                            <Input type="text" id="body" placeholder="Enter your description" required
-                                                                name="description"
-                                                                value={this.state.description}
-                                                                onChange={this.handleOnChange}
-                                                            />
-                                                        </FormGroup>
-                                                    </Col>
-                                                    <Col xs="12">
-                                                        <FormGroup>
-                                                            <Label htmlFor="name">Category</Label>
-                                                                <Input type="select" value={this.state.cate_id}  name="cate_id" id="cate_id" required
-                                                                className="form-control"
-                                                                onChange={this.handleOnChange}
-                                                                >
-                                                                    <option >Please select</option>
-                                                                    <option value="1">Ăn sáng</option>
-                                                                    <option value="2">Ăn trưa</option>
-                                                                    <option value="3">Ăn tối</option>
-                                                                    <option value="4">Ăn đêm</option>
-                                                                    <option value="5">Ăn vặt</option>
-                                                                </Input>
-                                                        </FormGroup>
-                                                    </Col>
-                                                    <Col xs="12">
+
+
+                                                    <Col xs="6">
                                                         <FormGroup>
                                                             <Label htmlFor="name">Images</Label>
                                                             <Input type="text" id="images" placeholder="Enter your url" required
@@ -185,7 +183,7 @@ class CreateRecipe extends Component {
                                                         </FormGroup>
                                                     </Col>
 
-                                                    <Col xs="12">
+                                                    <Col xs="6">
                                                         <FormGroup>
                                                             <Label htmlFor="name">Video</Label>
                                                             <Input type="text" id="url_video" placeholder="Enter your url" required
@@ -195,16 +193,31 @@ class CreateRecipe extends Component {
                                                             />
                                                         </FormGroup>
                                                     </Col>
-
-                                                    <Col xs="12">
-                                                        <FormGroup>
-                                                            <Label htmlFor="name">User</Label>
-                                                            <Input type="select" value={this.state.user_id}  name="user_id" id="user_id" required
+                                                    <Col xs="6">
+                                                    <FormGroup>
+                                                        <Label htmlFor="name">Category</Label>
+                                                        <Input type="select" value={this.state.cate_id} name="cate_id" id="cate_id" required
                                                             className="form-control"
                                                             onChange={this.handleOnChange}
+                                                        >
+                                                            <option >Please select</option>
+                                                            <option value="1">Ăn sáng</option>
+                                                            <option value="2">Ăn trưa</option>
+                                                            <option value="3">Ăn tối</option>
+                                                            <option value="4">Ăn đêm</option>
+                                                            <option value="5">Ăn vặt</option>
+                                                        </Input>
+                                                    </FormGroup>
+                                                </Col>
+                                                    <Col xs="6">
+                                                        <FormGroup>
+                                                            <Label htmlFor="name">User</Label>
+                                                            <Input type="select" value={this.state.user_id} name="user_id" id="user_id" required
+                                                                className="form-control"
+                                                                onChange={this.handleOnChange}
                                                             >
                                                                 <option >Please select</option>
-                                                                <option value="1">Admin</option>
+                                                                <option  value="1">Admin</option>
                                                             </Input>
                                                         </FormGroup>
                                                     </Col>
