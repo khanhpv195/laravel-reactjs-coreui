@@ -17,13 +17,13 @@ export default {
     },
     {
       name: 'Category',
-      url: '/product',
+      url: '/category',
       icon: 'icon-puzzle',
 
     },
     {
       name: 'User',
-      url: '/recipe',
+      url: '/user',
       icon: 'icon-puzzle',
     }
   ]

@@ -28,7 +28,9 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::resource('/api/products','ProductController');
+    Route::resource('/api/user','UserController');
     Route::resource('/api/recipe','RecipeController');
+    Route::resource('/api/category','CategoryController');
     Route::get('/recipe/show/{id}','RecipeController@showPost');
 });
 

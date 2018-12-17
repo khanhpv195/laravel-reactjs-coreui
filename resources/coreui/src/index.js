@@ -29,7 +29,8 @@ import EditRecipe from './views/Pages/Recipe/EditRecipe.js'
 import ShowRecipe from './views/Pages/Recipe/ShowRecipe.js'
 import CreateProduct from './views/Pages/Product/CreateProduct.js'
 import EditProduct from './views/Pages/Product/EditProduct.js'
-
+import User from './views/Pages/User/User.js'
+import Category from './views/Pages/Category/Category.js'
 ReactDOM.render((
   <Router>
     <Switch>
@@ -44,7 +45,8 @@ ReactDOM.render((
       <Route exact path="/recipe/create" name="Page Create Recipe" component={CreateRecipe}/>
       <Route exact path="/recipe/show/:id" name="Page Show Recipe" component={ShowRecipe}/>
       <Route exact path="/recipe/edit/:id" name="Page edit Recipe" component={EditRecipe}/>
-
+      <Route exact path="/user" name="Page edit User" component={User}/>
+      <Route exact path="/category" name="Page edit User" component={Category}/>
       <Route path="/" name="Home" component={Full}/>
 
     </Switch>
