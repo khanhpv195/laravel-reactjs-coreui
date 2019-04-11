@@ -50,23 +50,23 @@
                             <div class="col-md-12">
                                 <div id="idterm1" class="img-top col-md-2 col-xs-12 col-sm-12" style="margin-right:4%;">
                                    <a href="#" class="imgg" > <img style="width:99px;height:100px" src="{{ asset('images/breakfast.png') }}" alt=""></a>
-                                    <a href="#"   class="active_not">Ăn sáng</a>
+                                    <a href="#"   class="active_not">Breakfast</a>
                                 </div>
                                 <div id="idterm2" class="img-top col-md-2 col-xs-12 col-sm-12" style="margin-right:4%;">
                                     <a href="#"  class="imgg"><img style="width:99px;height:100px" src="{{ asset('images/popcorn.png') }}" alt="" ></a>
-                                    <a  href="#"  class="active_not">Ăn vặt</a>
+                                    <a  href="#"  class="active_not">Popcorn</a>
                                 </div>
                                 <div id="idterm3" class="img-top col-md-2 col-xs-12 col-sm-12" style="margin-right:4%;">
                                   <a href="#"  class="imgg"><img style="width:99px;height:100px" src="{{ asset('images/maincourse.png') }}" ></a>
-                                    <a href="#"  class="active_not" href="#">Ăn trưa</a>
+                                    <a href="#"  class="active_not" href="#">Main Course</a>
                                 </div>
                                 <div id="idterm4" class="img-top col-md-2 col-xs-12 col-sm-12" style="margin-right: 3%;">
                                    <a href="#"  class="imgg"><img style="width:99px;height:100px" src="{{ asset('images/dessert.png') }}"></a>
-                                    <a href="#"  class="active_not" href="#">Ăn tối<a>
+                                    <a href="#"  class="active_not" href="#">Dessert<a>
                                 </div>
                                 <div id="idterm5" class="img-top col-md-2 col-xs-12 col-sm-12" style="margin-rigth:0%;">
                                     <a href="#" class="imgg"><img  style="width:99px;height:100px" src="{{ asset('images/vegetable.png') }}" alt=""></a>
-                                    <a href="#"  class="active_not" href="#">Ăn đêm</a></a>
+                                    <a href="#"  class="active_not" href="#">Vegetables</a></a>
                                 </div>
                             </div>
 
