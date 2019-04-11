@@ -26,10 +26,9 @@
 
     <div class="container-fuild">
         <header class="nav header bg">
-            <nav class="navbar navbar-light content" id="example">
+            <nav class="navbar navbar-light content">
                 <img src="http://218.234.17.80:8000/img/law-cut-icon_03.png">
                 <a class="navbar-brand" href="/">RECIPE</a>
-                <script src="{{ mix('js/client.js') }}"></script>
             </nav>
         </header>
         <div class="container-fuild content">
