@@ -26,10 +26,10 @@
 
     <div class="container-fuild">
         <header class="nav header bg">
-            <nav class="navbar navbar-light content">
+            <nav class="navbar navbar-light content" id="example">
                 <img src="http://218.234.17.80:8000/img/law-cut-icon_03.png">
                 <a class="navbar-brand" href="/">RECIPE</a>
-
+                <script src="{{ mix('js/client.js') }}"></script>
             </nav>
         </header>
         <div class="container-fuild content">
@@ -38,6 +38,7 @@
                        <div class="row">
                         <div class="col-md-12" style="padding-right:3.1%;">
                             <form action="#" method="POST">
+                                    @csrf
                                 <input type="hidden" name="_token" value="mX8P3BfLpsPWEmm1JHMj190w6jjobHH26equr94g">                                <div class="input-group">
                                     <input type="text" class="form-control search" name="txtSearch" id="autocomplete" required/>
                                     <button type="submit" class=" btn-success"><i class="fa fa-search"></i></button>
