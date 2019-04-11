@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<div id="iterm">
+<div id="item">
 
  </div>
  <script>
@@ -18,7 +18,7 @@
                 htmlResult += "<ul class='list-unstyled'><li class='media'> <img class='mr-3 img-thumbnail' src='"+img+"'><div class='media-body'> <h5 class='mt-0 mb-1'><a href=''>"+title+"</a></h5> <p>"+description+"<p></p></li></div></ul>"
 
             })
-            $("#iterm").append(htmlResult);
+            $("#item").append(htmlResult);
         }
     });
  </script>
