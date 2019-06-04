@@ -17,7 +17,7 @@
   crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-    <title>Công thức nấu ăn</title>
+    <title>Recipe Hub</title>
 
 </head>
 
@@ -29,7 +29,6 @@
             <nav class="navbar navbar-light content">
                 <img src="http://218.234.17.80:8000/img/law-cut-icon_03.png">
                 <a class="navbar-brand" href="/">RECIPE</a>
-
             </nav>
         </header>
         <div class="container-fuild content">
@@ -38,6 +37,7 @@
                        <div class="row">
                         <div class="col-md-12" style="padding-right:3.1%;">
                             <form action="#" method="POST">
+                                    @csrf
                                 <input type="hidden" name="_token" value="mX8P3BfLpsPWEmm1JHMj190w6jjobHH26equr94g">                                <div class="input-group">
                                     <input type="text" class="form-control search" name="txtSearch" id="autocomplete" required/>
                                     <button type="submit" class=" btn-success"><i class="fa fa-search"></i></button>
@@ -50,23 +50,23 @@
                             <div class="col-md-12">
                                 <div id="idterm1" class="img-top col-md-2 col-xs-12 col-sm-12" style="margin-right:4%;">
                                    <a href="#" class="imgg" > <img style="width:99px;height:100px" src="{{ asset('images/breakfast.png') }}" alt=""></a>
-                                    <a href="#"   class="active_not">Ăn sáng</a>
+                                    <a href="#"   class="active_not">Breakfast</a>
                                 </div>
                                 <div id="idterm2" class="img-top col-md-2 col-xs-12 col-sm-12" style="margin-right:4%;">
                                     <a href="#"  class="imgg"><img style="width:99px;height:100px" src="{{ asset('images/popcorn.png') }}" alt="" ></a>
-                                    <a  href="#"  class="active_not">Ăn vặt</a>
+                                    <a  href="#"  class="active_not">Popcorn</a>
                                 </div>
                                 <div id="idterm3" class="img-top col-md-2 col-xs-12 col-sm-12" style="margin-right:4%;">
                                   <a href="#"  class="imgg"><img style="width:99px;height:100px" src="{{ asset('images/maincourse.png') }}" ></a>
-                                    <a href="#"  class="active_not" href="#">Ăn trưa</a>
+                                    <a href="#"  class="active_not" href="#">Main Course</a>
                                 </div>
                                 <div id="idterm4" class="img-top col-md-2 col-xs-12 col-sm-12" style="margin-right: 3%;">
                                    <a href="#"  class="imgg"><img style="width:99px;height:100px" src="{{ asset('images/dessert.png') }}"></a>
-                                    <a href="#"  class="active_not" href="#">Ăn tối<a>
+                                    <a href="#"  class="active_not" href="#">Dessert<a>
                                 </div>
                                 <div id="idterm5" class="img-top col-md-2 col-xs-12 col-sm-12" style="margin-rigth:0%;">
                                     <a href="#" class="imgg"><img  style="width:99px;height:100px" src="{{ asset('images/vegetable.png') }}" alt=""></a>
-                                    <a href="#"  class="active_not" href="#">Ăn đêm</a></a>
+                                    <a href="#"  class="active_not" href="#">Vegetables</a></a>
                                 </div>
                             </div>
 
@@ -81,13 +81,13 @@
                 </div>
                 <div class="col-md-3 col-xs-12 col-sm-12">
                         <ul class="list-group" style="margin-top:1%;" id="list-search">
-                                <li id="list" class="list-group-item disabled"><strong>Món được tìm kiếm nhiều</strong></li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">Ức gà chua ngọt</li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">Cá hồi chua ngọt</li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">Cá hồi chua ngọt</li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">Cá hồi chua ngọt</li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">Cá hồi chua ngọt</li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">Cá hồi chua ngọt</li>
+                                <li id="list" class="list-group-item disabled"><strong>Famous Searches</strong></li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">Kottu</li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">Fried Rice</li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">Mango Juice</li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">Burger</li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">Nasigurang</li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">Mix Rice</li>
                             </ul>
                             <br>
                     <img data-src="holder.js/200x200" src="{{ asset('images/cooky-recipe-636799168377709209.jpg') }}" data-holder-rendered="true" class="banner1">
