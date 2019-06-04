@@ -15,18 +15,23 @@
 //     return view('welcome');
 // });
 
-Route::get('/email',function(){
-    return view('email.email');
+
+Route::get('/', function () {
+    return view('client');
 });
 
-Route::post('/message/send', ['uses' => 'EmailController@sendMail', 'as' => 'front.fb']);
+
 // Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/', function () {
-        return view('welcome');
+    Route::get('/admin', function () {
+        return view('admin');
     });
 
     Route::resource('/api/products','ProductController');
+    Route::resource('/api/user','UserController');
+    Route::resource('/api/recipe','RecipeController');
+    Route::resource('/api/category','CategoryController');
+    Route::get('/recipe/show/{id}','RecipeController@showPost');
 });
 
 Auth::routes();

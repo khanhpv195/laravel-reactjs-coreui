@@ -7,6 +7,7 @@ import {
   Dropdown
 } from 'reactstrap';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Setting from './../../constant/setting.js'
 class HeaderDropdown extends Component {
 
   constructor(props) {
@@ -28,7 +29,7 @@ class HeaderDropdown extends Component {
     return (
       <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle nav>
-          <img src={'img/avatars/8.jpg'} className="img-avatar" alt="SKTT1 BLACK"/>
+          <img src={Setting.URL+'img/avatars/8.jpg'} className="img-avatar" alt="SKTT1 BLACK"/>
         </DropdownToggle>
         <DropdownMenu right>
           <DropdownItem header tag="div" className="text-center"><strong>Account</strong></DropdownItem>

@@ -10,24 +10,20 @@ export default {
       }
     },
     {
-      name: 'Đơn hàng',
-      url: '/order',
+      name: 'Recipe',
+      url: '/recipe',
       icon: 'icon-puzzle',
 
     },
     {
-      name: 'Sản phẩm',
-      url: '/product',
+      name: 'Category',
+      url: '/category',
       icon: 'icon-puzzle',
+
     },
     {
-      name: 'Khách hàng',
-      url: '/customer',
-      icon: 'icon-puzzle',
-    },
-    {
-      name: 'Doanh số',
-      url: '/sale',
+      name: 'User',
+      url: '/user',
       icon: 'icon-puzzle',
     }
   ]

@@ -1,0 +1,9 @@
+.override
+{
+    display: block;
+    margin: 0 auto;
+    border-color: red;
+    text-align: center;
+    margin:0 auto;
+    padding: 0;
+}
