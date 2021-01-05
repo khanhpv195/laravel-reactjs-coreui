@@ -14,7 +14,7 @@
         "@coreui/coreui-plugin-chartjs-custom-tooltips": "^1.2.0",
         "@coreui/icons": "0.3.0",
         "@coreui/react": "^2.0.9",
-        "axios": "^0.18",
+        "axios": "^0.21",
         "babel-preset-react": "^6.23.0",
         "bootstrap": "^4.0.0",
         "chart.js": "^2.7.2",
